@@ -1,0 +1,21 @@
+<view class="container">
+    <view class="login-txt">
+        <text>登录</text>
+    </view>
+    <view class="userinfo">
+        <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    </view>
+    <view class="login-form">
+        <input placeholder="请输入账号"/>
+    </view>
+    <view class="login-form">
+        <input placeholder="请输入密码" password/>
+    </view>
+    <view class="login-re">
+        <text>记住账号</text>
+        <switch type="switch" checked bindchange="switchChange"/>
+    </view>
+    <view class="login-btn">
+        <button type="primary" bindtap="bindLogin" size="{{primarySize}}" loading="{{loading}}">确定</button>
+    </view>
+</view>
