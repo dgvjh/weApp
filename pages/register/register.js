@@ -6,7 +6,22 @@ Page({
     loading:false,
     disabled:false,
     primarySize:'default',
-    userInfo:{}
+    userInfo:{},
+    array:['中国','美国','韩国'],
+    objectArray:[
+      {
+        id: 0,
+        name: '中国'
+      },
+      {
+        id: 1,
+        name: '美国'
+      },
+      {
+        id: 2,
+        name: '韩国'
+      }
+    ]
   },
   bindUpload: function(){
     wx.chooseImage({
@@ -26,7 +41,7 @@ Page({
           },
           complete:function(){
             wx.showToast({
-              title:'成功',
+              title:'上传成功',
               icon:"success",
               duration:2000
             })
@@ -37,6 +52,12 @@ Page({
         })
       }
     })
+  },
+  bindPickerChange: function(e){
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+      this.setData({
+        index: e.detail.value
+      })
   },
   bindLogin: function(){
     wx.navigateTo({

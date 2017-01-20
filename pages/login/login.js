@@ -10,6 +10,11 @@ Page({
     switchChange: function(e){
         console.log(e.detail.value)
     },
+    bindLogin: function(){
+        wx.navigateTo({
+          url: '../map/map'
+        })
+    },
     onLoad: function () {
         console.log('onLoad')
         var that = this

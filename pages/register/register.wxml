@@ -17,6 +17,13 @@
         <input placeholder="密码" password/>
     </view>
     <view class="section">
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+            <view class="picker">
+            选择国家：{{array[index]}}
+            </view>
+        </picker>
+    </view>
+    <view class="section">
         <button type="primary" bindtap="bindLogin" size="{{primarySize}}" loading="{{loading}}">确定</button>
     </view>
 </view>
